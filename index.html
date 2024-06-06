@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Bookmaker user front-end</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+   
+  </head>
+
+  <body class="container">
+    <h1 class="page-header">Choose wisely!</h1>
+    <nav id="header" class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand">Connected wallet address:</a>
+        <div id="account" class="d-flex"></div>
+      </div>
+    </nav>
+    <div class="row">
+      <div style="width: 40%; float:left">
+        <h3 class="sub-header">Participate</h3>
+        <form class="form-inline" role="form">
+          <div class="form-group">
+            <table>
+              <tr>
+                <td><label>Bet's alias:</label></td>
+                <td>
+                  <input class="form-control" id="betalias">
+                </td>
+              </tr>
+              <tr>
+                <td><label>Your answer:</label></td>
+                <td>
+                  <input class="form-control" id="youranswer">
+                </td>
+              </tr>
+              <tr>
+                <td><label>Money:</label></td>
+                <td>
+                  <input class="form-control" id="money">
+                </td>
+              </tr>
+            </table>
+          </div>
+        </form>
+        <a href="#" id="participate" class="btn btn-primary">Call</a>
+      </div>
+      <div style="width: 60%; float:right">
+        <div style="width: 50%; float:left">
+          <h3 class="sub-header">Get bets list</h3>
+          <form class="form-inline" role="form">
+            <a href="#" id="getbetslist" class="btn btn-primary">Call</a>
+            <div class="form-group">
+              <table>
+                <tr>
+                  <td>Info:</td>
+                  <td>
+                    <label id="lastInfo"></label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </form>
+        </div>
+        <div style="width: 50%; float:right">
+          <h3 class="sub-header">Get particular bet data</h3>
+          <form class="form-inline" role="form">
+            <div class="form-group">
+              <table>
+                <tr>
+                  <td><label>Bet's alias:</label></td>
+                  <td>
+                    <input class="form-control" id="sbetalias">
+                  </td>
+                </tr>
+                <tr>
+                  <td>Info:</td>
+                  <td>
+                    <label id="pbetdata"></label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </form>
+          <a href="#" id="getbetdata" class="btn btn-primary">Call</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div style="width: 60%; float:left">     
+        <div style="width: 50%; float:left">  
+          <h3 class="sub-header">Set margin of bets</h3>
+          <form class="form-inline" role="form">
+            <div class="form-group">
+              <table>
+                <tr>
+                  <td><label>Margin value:</label></td>
+                  <td>
+                    <input class="form-control" id="mymargin">
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </form>
+          <a href="#" id="setmargin" class="btn btn-primary">Call</a>
+        </div>
+        <div style="width: 50%; float:right">  
+          <h3 class="sub-header">Add bet to system</h3>
+          <form class="form-inline" role="form">
+            <div class="form-group">
+              <table>
+                <tr>
+                  <td><label>Bet's name:</label></td>
+                  <td>
+                    <input class="form-control" id="betname">
+                  </td>
+                </tr>
+                <tr>
+                  <td><label>Bet's question:</label></td>
+                  <td>
+                    <input class="form-control" id="betquestion">
+                  </td>
+                </tr>
+                <tr>
+                  <td><label>Answers:</label></td>
+                  <td>
+                    <input class="form-control" id="answersarr">
+                  </td>
+                </tr>
+                <tr>
+                  <td><label>Probabilities:</label></td>
+                  <td>
+                    <input class="form-control" id="probsarr">
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </form>
+          <a href="#" id="addbet" class="btn btn-primary">Call</a>
+        </div>
+      </div>
+      <div style="width: 40%; float:right">
+        <div style="width: 60%; float:left">
+          <div style="height: 50%; float:up">
+            <h3 class="sub-header">Add Money to Contract</h3>
+            <form class="form-inline" role="form">
+              <div class="form-group">
+                <table>
+                  <tr>
+                    <td><label>Summ:</label></td>
+                    <td>
+                      <input class="form-control" id="moneysumm">
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </form>
+            <a href="#" id="addmoney" class="btn btn-primary">Call</a>
+          </div>
+          <div style="height: 50%; float:bottom">
+            <h3 class="sub-header">Paying bet</h3>
+            <form class="form-inline" role="form">
+              <div class="form-group">
+                <table>
+                  <tr>
+                    <td><label>Bet's alias:</label></td>
+                    <td>
+                      <input class="form-control" id="betal">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><label>Right answer:</label></td>
+                    <td>
+                      <input class="form-control" id="rans">
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </form>
+            <a href="#" id="paybet" class="btn btn-primary">Call</a>
+          </div>
+        </div>
+        <div style="width: 40%; float:right">
+          <h3 class="sub-header">Get remainder</h3>
+          <form class="form-inline" role="form">
+            <a href="#" id="getremainder" class="btn btn-primary">Call</a>
+          </form>
+        </div>
+      </div> 
+    </div>
+
+    <script type="module" src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </body>
+</html>
